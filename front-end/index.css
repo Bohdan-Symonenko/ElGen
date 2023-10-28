@@ -1,168 +1,96 @@
 body {
-  margin: 0; /*отступы*/
+  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased; /*сглаживание текста*/
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /*бекграунд*/
   background: linear-gradient(to bottom, #474545, #4B5470);
 
 
   height: 100vh;
   display: flex;
-  align-items: center;
-  /*justify-content: right;*/
-
+  /*align-items: center;*/
 }
 
-.topbox
-{
-  display: flex;
-  position: sticky;
-  background-color: #070707;
-  width: 55%;
-  height: 7%;
-  border-radius:20px;
-  margin: 0 auto; /* Горизонтальное центрирование элемента */
-  margin-top: -37%;
-  margin-left: 21%;
-  flex-direction: row;
-
-  .global
-  {
-    background-color: #6886f5;
-    width: 15%;
-    height: 70%;
-    color: aliceblue;
-    font-size: 20px;
-    font-weight: bolder;
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-left: 10px;
-  }
-  .by_topics
-  {
-    background-color: #ffffff;
-    width: 15%;
-    height: 70%;
-    color: #1b1b1b;
-    font-size: 20px;
-    font-weight: bolder;
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-left: 10px;
-  }
-  .follow
-  {
-    background-color: #070707;
-    width: 15%;
-    height: 70%;
-    display: flex;
-    flex-direction: row;
-    .follow_icon
-    {
-      width: 30%;
-      height: 100%;
-      margin-top: 10px;
-      margin-left: 10px;
-    }
-    .follow_label
-    {
-      color: #9d9696;
-      font-size: 25px;
-      font-weight: bold;
-      margin-top: 15px;
-      margin-left: 7px;
-    }
-  }
-  .add_a_new_post
-  {
-    background-color: #6886f5;
-    width: 40%;
-    height: 70%;
-    color: aliceblue;
-    font-size: 20px;
-    font-weight: bolder;
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-left: 10px;
-  }
-  .three_dots
-  {
-    background-color: #070707;
-    width: 10%;
-    height: 70%;
-    border: none;
-    color: #afafaf;
-    font-size: 50px;
-    font-weight: bolder;
-    border-radius: 20px;
-    justify-content: center;
-    margin-top: 0px;
-    margin-left: 10px;
-
-  }
-
-}
-
-.main_panel
-{
+header {
+  width: 100%;
+  height: 40px;
+  background-color: #1f1f1f;
   position: fixed;
-  background-color: #09080a;
-  height: 110%;
-  width: 300px;
+  top: 0;
   display: flex;
-  margin-bottom:60px;
-  flex-direction: column;
-
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 10px; /* Добавьте отступы по бокам, чтобы элементы не были прижаты к краям хедера */
+}
+header .header_button {
+  width: 5%;
+  height: 70%;
+  border-radius: 20px;
+  background-color: #6482ec;
+  border: none;
+  font-weight: bolder;
+  color: aliceblue;
+  margin-right: 5%;
+}
+header .header_image {
+  border-radius: 50%;
+  height: 70%;
+  margin-left: 87%;
+}
+
+aside
+{
+  width: 270px;
+  height: 100%;
+  background-color: #09080a;
   display: flex;
-  .main_panel_header
-  {
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+aside .aside_main_text
+{
 
-                  text-align: center;
-                  color: #8d8d8d;
-                  top: 0;
-                  margin-bottom: 250%;
-                  margin-left: 40%;
-                }
-  .home_page_button
-  {
-    display: flex;
-    /*margin-top: 250px;*/
-    /*margin-left: 30px;*/
-    flex-direction: row;
+  color: #8d8d8d;
+  margin-top: -630px;
 
-    .home_icon
-    {
-      margin-left: -130px;
-      margin-bottom: 400px;
-      max-width: 50px; /* Максимальная ширина изображения */
-      max-height: 50px;
-      border-radius: 5%;
-
-    }
-    .home_page_label
-    {
-      color: #b6b6b7;
-      align-content: center;
-      text-align: center;
-      margin-top:7px;
-      font-weight: bolder ;
-      font-size: 18px;
-    }
-  }
+}
+aside .home_page_button
+{
+  display: flex;
+  /*margin-top: 250px;*/
+  /*margin-left: 30px;*/
   flex-direction: row;
-  .profile_button
-  {
 
-    margin-top: 120px;
-    margin-left: -17px;
-    display: flex;
-    flex-direction: row;
+  .home_icon
+  {
+    margin-left: -130px;
+    margin-bottom: 400px;
+    max-width: 50px; /* Максимальная ширина изображения */
+    max-height: 50px;
+    border-radius: 5%;
+
+  }
+  .home_page_label
+  {
+    color: #b6b6b7;
+    align-content: center;
+    text-align: center;
+    margin-top:7px;
+    font-weight: bolder ;
+    font-size: 18px;
+  }
+}
+aside .profile_button
+{
+
+  margin-top: 120px;
+  margin-left: -17px;
+  display: flex;
+  flex-direction: row;
 
   .profile_icon
   {
@@ -173,455 +101,502 @@ body {
     border-radius: 5%;
 
   }
-    .profile_label
-    {
-      color: #b6b6b7;
-      align-content: center;
-      text-align: center;
-      margin-top:7px;
-      font-weight: bolder ;
-      font-size: 18px;
-    }
-
-  }
-  flex-direction: row;
-  .messages_button
+  .profile_label
   {
+    color: #b6b6b7;
+    align-content: center;
+    text-align: center;
+    margin-top:7px;
+    font-weight: bolder ;
+    font-size: 18px;
+  }
 
-    margin-top: 230px;
-    margin-left: 0px;
-    display: flex;
-    flex-direction: row;
+}
+aside .messages_button
+{
 
-    .messages_icon
-    {
-      margin-left: -130px;
-      margin-bottom: 400px;
-      max-width: 50px; /* Максимальная ширина изображения */
-      max-height: 50px;
-      border-radius: 5%;
+  margin-top: 230px;
+  margin-left: 0px;
+  display: flex;
+  flex-direction: row;
 
-    }
-    .messages_label
-    {
-      color: #b6b6b7;
-      align-content: center;
-      text-align: center;
-      margin-top:7px;
-      font-weight: bolder ;
-      font-size: 18px;
-    }
+  .messages_icon
+  {
+    margin-left: -130px;
+    margin-bottom: 400px;
+    max-width: 50px; /* Максимальная ширина изображения */
+    max-height: 50px;
+    border-radius: 5%;
 
   }
+  .messages_label
+  {
+    color: #b6b6b7;
+    align-content: center;
+    text-align: center;
+    margin-top:7px;
+    font-weight: bolder ;
+    font-size: 18px;
+  }
+
+}
+
+nav
+{
+  height: 50px;
+  width: 800px;
+  background-color: #09080a ;
+  display: flex;
+ margin-left: 355px;
+  margin-top: 70px;
+  border-radius: 30px;
+
+  position: fixed;
+
+}
+nav .global
+{
+  background-color: #6886f5;
+  width: 15%;
+  height: 70%;
+  color: aliceblue;
+  font-size: 20px;
+  font-weight: bolder;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+nav .by_topics
+{
+  background-color: #ffffff;
+  width: 15%;
+  height: 70%;
+  color: #1b1b1b;
+  font-size: 20px;
+  font-weight: bolder;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+nav .follow
+{
+  background-color: #070707;
+  width: 15%;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  .follow_icon
+  {
+    width: 30%;
+    height: 100%;
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+  .follow_label
+  {
+    color: #9d9696;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 1px;
+  }
+}
+nav .add_a_new_post
+{
+  background-color: #6886f5;
+  width: 40%;
+  height: 70%;
+  color: aliceblue;
+  font-size: 20px;
+  font-weight: bolder;
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+nav .three_dots
+{
+  background-color: #484649;
+  width: 10%;
+  height: 0%;
+
+  border: none;
+  color: #afafaf;
+  font-size: 50px;
+  font-weight: bolder;
+  border-radius: 50px;
+  justify-content: center;
+  margin-top: -10px;
+  margin-left: 5px;
+
 }
 
 .sidebox
 {
-  position: absolute;
   background-color: #070707;
   border-radius: 12%;
-  width: 300px;
-  height: 330px;
+  width: 250px;
+  height: 345px;
   display: flex;
-  justify-content: right;
-  /*align-items: right;*/
-  float: right;
-  margin-left: 83%;
-  padding: 10px;
+  margin-top: 15%;
+  margin-left: 1200px;
   flex-direction: column;
+  position: fixed;
+}
+.sidebox_header
+{
+  color: aliceblue;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  /*margin-bottom: 100px;*/
+  margin-top: 15px;
+  max-height: 20px;
+  max-width: 90%;
+  margin-bottom: 10px;
+}
+
+.sidebox_body
+{
+  display: flex;
+  flex-direction: column;
+  margin-top: 4%;
+  margin-left: 4%;
+  .you_might_also_like_1
+  {
+    display: flex;
+    align-items: center;
+    max-width: 90%;
+    max-height: 70px;
+    margin-left: 3%;
+    .you_might_also_like_1_name_surname
+    {
+      cursor: pointer;
+      text-align: center;
+      color: aliceblue;
+      font-size: 16px;
+      font-weight: bold;
+      margin-right: 20px;
+      max-width: 90%;
+    }
+    .sidebox_photo_1
+    {
+
+      margin-top: 10px;
+      margin-right: 10px;
+
+      border-radius: 50%;
+      float: left;
+      cursor: pointer;
+
+      max-width: 50px; /* Максимальная ширина изображения */
+      max-height: 50px; /* Максимальная высота изображения */
+
+    }
+    .you_might_also_like_1_follow-button {
+      background-color: #597aed;
+      font-size: 15px;
+      font-weight: bold;
+      margin-left: 0px;
+      color: aliceblue;
+      padding: 8px 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      max-width: 90px; /* Максимальная ширина кнопки */
+    }
+  }
+  flex-direction: column;
+  .you_might_also_like_2
+  {
+    display: flex;
+    align-items: center;
+    max-width: 90%;
+    max-height: 70px;
+    margin-left: 3%;
+    .you_might_also_like_2_name_surname
+    {
+      cursor: pointer;
+      text-align: center;
+      color: aliceblue;
+      font-size: 16px;
+      font-weight: bold;
+      margin-right: 20px;
+      max-width: 90%;
+    }
+    .sidebox_photo_2
+    {
+
+      margin-top: 10px;
+      margin-right: 10px;
+
+      border-radius: 50%;
+      float: left;
+      cursor: pointer;
+
+      max-width: 50px; /* Максимальная ширина изображения */
+      max-height: 50px; /* Максимальная высота изображения */
+
+    }
+    .you_might_also_like_2_follow-button {
+      background-color: #597aed;
+      font-size: 15px;
+      font-weight: bold;
+      margin-left: 0px;
+      color: aliceblue;
+      padding: 8px 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      max-width: 90px; /* Максимальная ширина кнопки */
+    }
+  }
+  flex-direction: column;
+  .you_might_also_like_3
+  {
+    display: flex;
+    align-items: center;
+    max-width: 90%;
+    max-height: 70px;
+    margin-left: 3%;
+    .you_might_also_like_3_name_surname
+    {
+      cursor: pointer;
+      text-align: center;
+      color: aliceblue;
+      font-size: 16px;
+      font-weight: bold;
+      margin-right: 20px;
+      max-width: 90%;
+    }
+    .sidebox_photo_3
+    {
+
+      margin-top: 10px;
+      margin-right: 10px;
+
+      border-radius: 50%;
+      float: left;
+      cursor: pointer;
+
+      max-width: 50px; /* Максимальная ширина изображения */
+      max-height: 50px; /* Максимальная высота изображения */
+
+    }
+    .you_might_also_like_3_follow-button {
+      background-color: #597aed;
+      font-size: 15px;
+      font-weight: bold;
+      margin-left: 0px;
+      color: aliceblue;
+      padding: 8px 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      max-width: 90px; /* Максимальная ширина кнопки */
+    }
+  }
+  flex-direction: column;
+  .you_might_also_like_4
+  {
+    display: flex;
+    align-items: center;
+    max-width: 90%;
+    max-height: 70px;
+    margin-left: 3%;
+    .you_might_also_like_4_name_surname
+    {
+      cursor: pointer;
+      text-align: center;
+      color: aliceblue;
+      font-size: 16px;
+      font-weight: bold;
+      margin-right: 20px;
+      max-width: 90%;
+    }
+    .sidebox_photo_4
+    {
+
+      margin-top: 10px;
+      margin-right: 10px;
+
+      border-radius: 50%;
+      float: left;
+      cursor: pointer;
+
+      max-width: 50px; /* Максимальная ширина изображения */
+      max-height: 50px; /* Максимальная высота изображения */
+
+    }
+    .you_might_also_like_4_follow-button {
+      background-color: #597aed;
+      font-size: 15px;
+      font-weight: bold;
+      margin-left: 0px;
+      color: aliceblue;
+      padding: 8px 10px;
+      border-radius: 20px;
+      cursor: pointer;
+      max-width: 90px; /* Максимальная ширина кнопки */
+    }
+  }
+
+}
+
+.sidebox_footer
+{
+  color: #6d9af2;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+
+}
+
+
+
+.post_body
+{
+  position: relative;
+  width: 800px;
+  height: 550px;
+  justify-content: center;
+  align-items: center;
+  background-color: #070707;
+  border-radius: 20px;
+  margin-left: 355px; /* Horizontally center the element */
+  margin-top: 155px; /* Adjust as needed */
+
+  display: flex;
+}
+.post_author_avatar
+{
+
+  margin-top: -420px;
+  margin-left: -2550px;
+  width: 10%;
+  border-radius: 50%;
   display: flex;
 
 
-  .sidebox_header
-  {
-    color: aliceblue;
-    font-size: 20px;
-    text-align: center;
-    font-weight: bold;
-    /*margin-bottom: 100px;*/
-    max-height: 20px;
-    max-width: 100%;
-    margin-bottom: 10px;
-  }
-
- .sidebox_body
- {
-   display: flex;
-   flex-direction: column;
-   .you_might_also_like_1
-   {
-     display: flex;
-     align-items: center;
-     max-width: 100%;
-     max-height: 70px;
-     .you_might_also_like_1_name_surname
-     {
-       cursor: pointer;
-       text-align: center;
-       color: aliceblue;
-       font-size: 16px;
-       font-weight: bold;
-       margin-right: 20px;
-       max-width: 90%;
-     }
-     .sidebox_photo_1
-     {
-
-       margin-top: 10px;
-       margin-right: 10px;
-
-       border-radius: 50%;
-       float: left;
-       cursor: pointer;
-
-       max-width: 50px; /* Максимальная ширина изображения */
-       max-height: 50px; /* Максимальная высота изображения */
-
-     }
-     .you_might_also_like_1_follow-button {
-       background-color: #597aed;
-       font-size: 15px;
-       font-weight: bold;
-       margin-left: 0px;
-       color: aliceblue;
-       padding: 8px 10px;
-       border-radius: 20px;
-       cursor: pointer;
-       max-width: 90px; /* Максимальная ширина кнопки */
-     }
-   }
-   flex-direction: column;
-   .you_might_also_like_2
-   {
-     display: flex;
-     align-items: center;
-     max-width: 100%;
-     max-height: 70px;
-     .you_might_also_like_2_name_surname
-     {
-       cursor: pointer;
-       text-align: center;
-       color: aliceblue;
-       font-size: 16px;
-       font-weight: bold;
-       margin-right: 20px;
-       max-width: 90%;
-     }
-     .sidebox_photo_2
-     {
-
-       margin-top: 10px;
-       margin-right: 10px;
-
-       border-radius: 50%;
-       float: left;
-       cursor: pointer;
-
-       max-width: 50px; /* Максимальная ширина изображения */
-       max-height: 50px; /* Максимальная высота изображения */
-
-     }
-     .you_might_also_like_2_follow-button {
-       background-color: #597aed;
-       font-size: 15px;
-       font-weight: bold;
-       margin-left: 0px;
-       color: aliceblue;
-       padding: 8px 10px;
-       border-radius: 20px;
-       cursor: pointer;
-       max-width: 90px; /* Максимальная ширина кнопки */
-     }
-   }
-   flex-direction: column;
-   .you_might_also_like_3
-   {
-     display: flex;
-     align-items: center;
-     max-width: 100%;
-     max-height: 70px;
-     .you_might_also_like_3_name_surname
-     {
-       cursor: pointer;
-       text-align: center;
-       color: aliceblue;
-       font-size: 16px;
-       font-weight: bold;
-       margin-right: 20px;
-       max-width: 90%;
-     }
-     .sidebox_photo_3
-     {
-
-       margin-top: 10px;
-       margin-right: 10px;
-
-       border-radius: 50%;
-       float: left;
-       cursor: pointer;
-
-       max-width: 50px; /* Максимальная ширина изображения */
-       max-height: 50px; /* Максимальная высота изображения */
-
-     }
-     .you_might_also_like_3_follow-button {
-       background-color: #597aed;
-       font-size: 15px;
-       font-weight: bold;
-       margin-left: 0px;
-       color: aliceblue;
-       padding: 8px 10px;
-       border-radius: 20px;
-       cursor: pointer;
-       max-width: 90px; /* Максимальная ширина кнопки */
-     }
-   }
-   flex-direction: column;
-   .you_might_also_like_4
-   {
-     display: flex;
-     align-items: center;
-     max-width: 100%;
-     max-height: 70px;
-     .you_might_also_like_4_name_surname
-     {
-       cursor: pointer;
-       text-align: center;
-       color: aliceblue;
-       font-size: 16px;
-       font-weight: bold;
-       margin-right: 20px;
-       max-width: 90%;
-     }
-     .sidebox_photo_4
-     {
-
-       margin-top: 10px;
-       margin-right: 10px;
-
-       border-radius: 50%;
-       float: left;
-       cursor: pointer;
-
-       max-width: 50px; /* Максимальная ширина изображения */
-       max-height: 50px; /* Максимальная высота изображения */
-
-     }
-     .you_might_also_like_4_follow-button {
-       background-color: #597aed;
-       font-size: 15px;
-       font-weight: bold;
-       margin-left: 0px;
-       color: aliceblue;
-       padding: 8px 10px;
-       border-radius: 20px;
-       cursor: pointer;
-       max-width: 90px; /* Максимальная ширина кнопки */
-     }
-   }
-
- }
-
-  .sidebox_footer
-  {
-    color: #6d9af2;
-    font-size: 20px;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 10px;
-    cursor: pointer;
-
-  }
-
-
 }
-
-.header
+.post_author_nickname
 {
-  position: fixed;
-  position: absolute;
-  position: fixed;
-  /* Закрепляем хедер сверху экрана */
-  top: 0; /* Размещаем его вверху */
 
-  background-color: #1b1b1b; /* черный фон хедера */
-  color: #9c9595; /* белый текст */
-  padding: 10px 0; /* добавление отступов сверху и снизу */
-  width: 100%;
-  text-align: center; /* выравнивание текста по центру */
-  font-size: 24px; /* размер шрифта */
-  font-weight: bold; /* жирное начертание */
+  color: aliceblue;
+  margin-top: -460px;
+  margin-left: 20px;
+  font-size: 40px;
+  font-weight: bolder;
+  display: flex;
+}
+.hashtag_1
+{
 
-  .avatar_header_img
-  {
-    max-width: 35px; /* Максимальная ширина изображения */
-    max-height: 35px; /* Максимальная высота изображения */
-    border-radius: 50%;
-    float: right;
-    margin-right: 2%; /* Отступ справа от изображения *!*!*/
-    cursor: pointer;
-  }
-  .logout-button
-  {
-    background-color: #6482ec; /*цвет заливки*/
-    color: aliceblue; /*text colour*/
-    padding: 10px 10px;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    float: right;
-    margin-right: 5%;
+  width: 130px;
+  height: 30px;
+  background-color: #8d8d8d;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #474545 ;
 
-  }
+  margin-top: 0px;
+  margin-left: 0px;
 
 }
+.hashtag_2
+{
 
-  .post_body
-  {
-    position: absolute; /* Используем относительное позиционирование для родительского контейнера */
-    display: flex;
-    width: 60%;
-    height: 80%;
-    justify-content: center; /* Горизонтальное центрирование */
-    align-items: center; /* Вертикальное центрирование */
-    background-color: #070707;
-    border-radius: 20px;
-    margin: 0  auto;
-    margin-top: 7%;
-    margin-left: 19%;
-    .post_author_avatar
-    {
-      position: absolute;
-      margin-top: -50%;
-      margin-left: -85%;
-      width: 9%;
-      border-radius: 50%;
-    }
-    .post_author_nickname
-    {
-      position: absolute;
-      color: aliceblue;
-      margin-top: -55%;
-      margin-left: -50%;
-      font-size: 40px;
-      font-weight: bolder;
-    }
-    .hashtag_1
-    {
-      position: absolute;
-      width: 15%;
-      height: 5%;
-      background-color: #8d8d8d;
-      border-radius: 20px;
-      text-align: center;
-      font-size: 20px;
-      font-weight: bolder;
-      color: #474545 ;
+  width: 0px;
+  height: 0px;
+  background-color: #8d8d8d;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #474545 ;
 
-      margin-top: -45%;
-      margin-left: -57%;
+  margin-top: 0px;
+  margin-left: 0px;
 
-    }
-    .hashtag_2
-    {
-      position: absolute;
-      width: 15%;
-      height: 5%;
-      background-color: #8d8d8d;
-      border-radius: 20px;
-      text-align: center;
-      font-size: 20px;
-      font-weight: bolder;
-      color: #474545 ;
+}
+.hashtag_3
+{
 
-      margin-top: -45%;
-      margin-left: -25%;
+  width: 0px;
+  height: 0px;
+  background-color: #8d8d8d;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
+  color: #474545 ;
 
-    }
-    .hashtag_3
-    {
-      position: absolute;
-      width: 15%;
-      height: 5%;
-      background-color: #8d8d8d;
-      border-radius: 20px;
-      text-align: center;
-      font-size: 20px;
-      font-weight: bolder;
-      color: #474545 ;
+  margin-top: 0px;
+  margin-left: 0px;
 
-      margin-top: -45%;
-      margin-left: 7%;
+}
+.post_img
+{
 
-    }
+  width: 85%;
+  height: 60%;
+  margin-top: 10%;
+  margin-left: -435px;
+}
+.post_desc
+{
 
-    .post_img
-    {
-      position: absolute;
-      width: 85%;
-      height: 60%;
-      margin-top: 10%;
-    }
-    .post_desc
-    {
-      position: absolute;
-      color: aliceblue;
-      margin-top: -35%;
-      margin-left: -57%;
-      font-size: 35px;
+  color: aliceblue;
+  margin-top: -46%;
+  margin-left: -50%;
+  font-size: 30px;
 
-    }
-    .like_unliked_icon_png
-    {
-      position: absolute;
-      width: 4%;
-      margin-bottom: -54%;
-      margin-left: -80%;
-    }
-    .like_counter
-    {
-      position: absolute;
-      color: #8d8d8d;
-      margin-bottom: -54%;
-      margin-left: -74.5%;
-      font-size: 25px;
-    }
-    .repost_icon_png
-    {
-      position: absolute;
-      width: 3.5%;
-      margin-bottom: -54%;
-      margin-left: -62%;
-    }
-    .repost_counter
-    {
-      position: absolute;
-      color: #8d8d8d;
-      margin-bottom: -54%;
-      margin-left: -56.5%;
-      font-size: 25px;
-    }
-    .views_icon_png
-    {
-      position: absolute;
-      width: 4%;
-      margin-bottom: -54%;
-      margin-left: -44%;
-    }
-    .views_counter
-    {
-      position: absolute;
-      color: #8d8d8d;
-      margin-bottom: -54%;
-      margin-left: -38.5%;
-      font-size: 25px;
-    }
-  }
+}
+.like_unliked_icon_png
+{
 
+  width: 4%;
+  margin-bottom: -54%;
+  margin-left: -80%;
+}
+.like_counter
+{
 
+  color: #8d8d8d;
+  margin-bottom: -54%;
+  margin-left: -74.5%;
+  font-size: 25px;
+}
+.repost_icon_png
+{
 
+  width: 3.5%;
+  margin-bottom: -54%;
+  margin-left: -62%;
+}
+.repost_counter
+{
 
+  color: #8d8d8d;
+  margin-bottom: -54%;
+  margin-left: -56.5%;
+  font-size: 25px;
+}
+.views_icon_png
+{
+
+  width: 4%;
+  margin-bottom: -54%;
+  margin-left: -44%;
+}
+.views_counter
+{
+
+  color:  #8d8d8d;
+  margin-bottom: -10px;
+  margin-left: -3px;
+  font-size: 10px;
+}
 
 
 code {
