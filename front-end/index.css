@@ -460,47 +460,116 @@ nav .three_dots
 
 }
 
-#new_post_modal
-{
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 999; /* Поверх всех других элементов */
-}
 
-.modal
-{
-  display: none;
+
+#modal {
   position: fixed;
-  z-index: 995;
-  left: 0;
+  top: 65%; /* Центрируем по вертикали */
+  right: -13%; /* Центрируем по горизонтали */
+  transform: translate(-50%, -50%); /* Для точной центровки */
+  background: #48484e ;
+  padding: 20px;
+  z-index: 9999; /* Установите значение z-index больше, чем у других элементов */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.modal_header
+{
+  padding: 10px;
+  height: 6%;
+  width: 105%;
+  margin-left: -20px;
+  margin-top: -20px;
   top: 0;
+  background-color: #4b536f ;
+  border-radius: 10px;
+  color: #ffffff  ;
+  font-weight: bolder;
+  text-align: left;
+  font-size: 20px;
+}
+.modal_footer
+{
+  position: absolute;
+  height: 10%;
   width: 100%;
-  height: 100%;
-  background-color: #000;
-  opacity: 0.6;
+  margin-left: -20px;
+  margin-bottom: 0px;
+  bottom: 0;
+  background-color: #070707 ;
+  border-radius: 10px;
+.post_button
+{
+border-radius: 30px;
+  width: 20%;
+  height: 70%;
+  background-color: #6886f5;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 77%;
+  margin-top: 2%;
+}
+  .modal_images
+  {
+    bottom: 0;
+    margin-top: -30px;
+    margin-left: 10px;
+  }
+  .modal_img1
+  {
+
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+  }
+  .modal_img2
+  {
+
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+  }
+  .modal_img3
+  {
+
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+  }
+  .modal_img4
+  {
+
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+  }
+
+}
+.modal {
+  display: none;
+  position: relative;
+  margin: 0 auto;
+  background-color: #888;
+  width: 400px;
+  height: 450px;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 .modal-content {
-  position: absolute;
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: #afafaf;
 }
 
 .close {
   position: absolute;
-  right: 10px;
-  top: 10px;
-  color: #888;
-  font-size: 30px;
+  top: -65px;
+  right: -10px;
+  font-size: 20px;
   cursor: pointer;
+  color: #fff;
 }
 
 
