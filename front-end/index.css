@@ -14,6 +14,8 @@ body {
   /*align-items: center;*/
 }
 
+
+
 header {
   width: 100%;
   height: 40px;
@@ -234,13 +236,15 @@ nav .three_dots
 {
   background-color: #070707;
   border-radius: 12%;
-  width: 250px;
+  width: 290px;
   height: 345px;
   display: flex;
   margin-top: 15%;
-  margin-left: 1200px;
+  margin-left: 1180px;
   flex-direction: column;
   position: fixed;
+  background-color: rgba(0, 0, 0, 1); /* Здесь также можно использовать полупрозрачный цвет фона */
+  z-index: 938;
 }
 .sidebox_header
 {
@@ -250,6 +254,7 @@ nav .three_dots
   font-weight: bold;
   /*margin-bottom: 100px;*/
   margin-top: 15px;
+  margin-left: 10px;
   max-height: 20px;
   max-width: 90%;
   margin-bottom: 10px;
@@ -275,7 +280,8 @@ nav .three_dots
       color: aliceblue;
       font-size: 16px;
       font-weight: bold;
-      margin-right: 20px;
+      margin-left: 5px;
+      margin-right: 25px;
       max-width: 90%;
     }
     .sidebox_photo_1
@@ -295,6 +301,7 @@ nav .three_dots
     .you_might_also_like_1_follow-button {
       background-color: #597aed;
       font-size: 15px;
+      float: right;
       font-weight: bold;
       margin-left: 0px;
       color: aliceblue;
@@ -320,6 +327,7 @@ nav .three_dots
       font-size: 16px;
       font-weight: bold;
       margin-right: 20px;
+      margin-left: 2px;
       max-width: 90%;
     }
     .sidebox_photo_2
@@ -363,7 +371,8 @@ nav .three_dots
       color: aliceblue;
       font-size: 16px;
       font-weight: bold;
-      margin-right: 20px;
+      margin-right: 25px;
+      margin-left: 5px;
       max-width: 90%;
     }
     .sidebox_photo_3
@@ -407,7 +416,8 @@ nav .three_dots
       color: aliceblue;
       font-size: 16px;
       font-weight: bold;
-      margin-right: 20px;
+      margin-right: 22px;
+      margin-left: 5px;
       max-width: 90%;
     }
     .sidebox_photo_4
@@ -450,30 +460,76 @@ nav .three_dots
 
 }
 
+#new_post_modal
+{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999; /* Поверх всех других элементов */
+}
+
+.modal
+{
+  display: none;
+  position: fixed;
+  z-index: 995;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.6;
+}
+
+.modal-content {
+  position: absolute;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #888;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+
 
 
 .post_body
 {
   position: relative;
   width: 800px;
-  height: 550px;
+  height: 560px;
   justify-content: center;
   align-items: center;
   background-color: #070707;
   border-radius: 20px;
   margin-left: 355px; /* Horizontally center the element */
-  margin-top: 155px; /* Adjust as needed */
+  margin-top: 140px; /* Adjust as needed */
 
   display: flex;
+  flex-direction: unset;
 }
 .post_author_avatar
 {
 
-  margin-top: -420px;
-  margin-left: -2550px;
+  margin-top: -450px;
+  margin-left: -670px;
   width: 10%;
   border-radius: 50%;
-  display: flex;
+ margin-right: 10px;
+  position: absolute;
 
 
 }
@@ -481,11 +537,13 @@ nav .three_dots
 {
 
   color: aliceblue;
-  margin-top: -460px;
-  margin-left: 20px;
+  margin-top: -500px;
+  margin-left: -375px;
   font-size: 40px;
   font-weight: bolder;
-  display: flex;
+  position: absolute;
+
+
 }
 .hashtag_1
 {
@@ -499,15 +557,16 @@ nav .three_dots
   font-weight: bolder;
   color: #474545 ;
 
-  margin-top: 0px;
-  margin-left: 0px;
+  margin-top: -420px;
+  margin-left: -450px;
+  position: absolute;
 
 }
 .hashtag_2
 {
 
-  width: 0px;
-  height: 0px;
+  width: 130px;
+  height: 30px;
   background-color: #8d8d8d;
   border-radius: 20px;
   text-align: center;
@@ -515,15 +574,16 @@ nav .three_dots
   font-weight: bolder;
   color: #474545 ;
 
-  margin-top: 0px;
-  margin-left: 0px;
+  margin-top: -420px;
+  margin-left: -180px;
+  position: absolute;
 
 }
 .hashtag_3
 {
-
-  width: 0px;
-  height: 0px;
+position: absolute;
+  width: 130px;
+  height: 30px;
   background-color: #8d8d8d;
   border-radius: 20px;
   text-align: center;
@@ -531,71 +591,75 @@ nav .three_dots
   font-weight: bolder;
   color: #474545 ;
 
-  margin-top: 0px;
-  margin-left: 0px;
+  margin-top: -420px;
+  margin-left: 92px;
 
 }
 .post_img
 {
 
   width: 85%;
-  height: 60%;
-  margin-top: 10%;
-  margin-left: -435px;
+  height: 67%;
+  margin-top: 100px;
+  margin-left: -0px;
+  position: absolute;
 }
 .post_desc
 {
-
+  position: absolute;
+flex-direction: column;
+  align-content: center;
   color: aliceblue;
-  margin-top: -46%;
-  margin-left: -50%;
-  font-size: 30px;
+  margin-top: -335px;
+  margin-left: 20px;
+  font-size: 20px;
 
 }
 .like_unliked_icon_png
 {
 
   width: 4%;
-  margin-bottom: -54%;
-  margin-left: -80%;
+  margin-bottom: -510px;
+  margin-left: -420px;
+
 }
 .like_counter
 {
 
   color: #8d8d8d;
-  margin-bottom: -54%;
-  margin-left: -74.5%;
+  margin-bottom: -510px;
+  margin-left: 5px;
   font-size: 25px;
 }
 .repost_icon_png
 {
 
   width: 3.5%;
-  margin-bottom: -54%;
-  margin-left: -62%;
+  margin-bottom: -510px;
+  margin-left: 20px;
 }
 .repost_counter
 {
 
   color: #8d8d8d;
-  margin-bottom: -54%;
-  margin-left: -56.5%;
+  margin-bottom: -510px;
+  margin-left: 5px;
   font-size: 25px;
 }
 .views_icon_png
 {
 
   width: 4%;
-  margin-bottom: -54%;
-  margin-left: -44%;
+  margin-bottom: -510px;
+  margin-left: 20px;
 }
 .views_counter
 {
 
   color:  #8d8d8d;
-  margin-bottom: -10px;
-  margin-left: -3px;
-  font-size: 10px;
+  margin-bottom: -510px;
+  margin-left: 5px;
+  font-size: 25px;
 }
 
 
