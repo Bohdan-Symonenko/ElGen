@@ -199,7 +199,42 @@
 
 
 
-<script src="send_message.js"></script>
+<script>
+  document.getElementById('post_button').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    var new_post_input = document.getElementById("new_post_input");
+    const text = new_post_input.value;
+
+    const messageData = {
+      messageText: text
+      // Другие поля сущности Message, если они есть
+    };
+
+    fetch('http://localhost:8080/api/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(messageData)
+    })
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+              return response.json();
+            })
+            .then(data => {
+              console.log('Создано новое сообщение:', data);
+              // Обработка ответа от сервера
+            })
+            .catch(error => {
+              console.error('Произошла ошибка при создании сообщения:', error);
+              // Выводим сообщение об ошибке в консоль
+            });
+  });
+
+</script>
 </body>
 <header>
   <img src="post_author_avatar.png" class="header_image">
