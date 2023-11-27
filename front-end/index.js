@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import "./make_post_modal.js";
+import "./make_new_post.js";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

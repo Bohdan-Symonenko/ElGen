@@ -14,6 +14,8 @@ body {
   /*align-items: center;*/
 }
 
+root{}
+
 
 
 header {
@@ -577,7 +579,7 @@ border-radius: 30px;
 
 .post_body
 {
-  position: relative;
+  /*position: relative;*/
   width: 800px;
   height: 560px;
   justify-content: center;
@@ -588,7 +590,7 @@ border-radius: 30px;
   margin-top: 140px; /* Adjust as needed */
 
   display: flex;
-  flex-direction: unset;
+  flex-direction: column;
 }
 .post_author_avatar
 {
@@ -730,6 +732,11 @@ flex-direction: column;
   margin-left: 5px;
   font-size: 25px;
 }
+
+
+
+
+
 
 
 code {

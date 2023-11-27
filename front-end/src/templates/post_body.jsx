@@ -15,7 +15,7 @@ const PostBody = () => {
             <div className="post_author_nickname">Juri Dalkin</div>
             <Hashtags tags={hashtags} />
             <PostDescription text="When you trying to be a tough dog, but you actually just look like cute mashed potato XDD" />
-            <PostImage src="post_img.png" />
+            <PostImage src="" />
             <Counter src="like_unliked_icon.png" count={188} />
             <Counter src="repost_icon.png" count={25} />
             <Counter src="views_icon.png" count={342} />

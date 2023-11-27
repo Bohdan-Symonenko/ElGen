@@ -53,21 +53,25 @@ document.addEventListener("DOMContentLoaded", function()
     }
 
 
-    var hashtagDiv = document.getElementById("modal2_hashtag1");
-    // var currentColor = window.getComputedStyle(hashtagDiv).backgroundColor;
-    console.log("Див был нажат!");
-    hashtagDiv.onclick = function(event)
-    {
+    const hashtagDiv = document.getElementById("modal2_hashtag1");
 
+// Проверка наличия элемента и добавление обработчика события
+    if (hashtagDiv) {
+        hashtagDiv.onclick = function(event) {
+            // Получаем текущий цвет фона элемента
+            const currentColor = window.getComputedStyle(hashtagDiv).backgroundColor;
 
-        // Меняем цвет фона дива
-        if (hashtagDiv.style.backgroundColor === "#48484e")
-        {
-            hashtagDiv.style.backgroundColor = "#6d9af2"; // Замените "blue" на ваш желаемый цвет
-        } else {
-            hashtagDiv.style.backgroundColor = "#48484e"; // Замените "red" на ваш желаемый цвет
-        }
+            // Проверяем текущий цвет и изменяем его
+            if (currentColor === "rgb(72, 72, 78)") {
+                hashtagDiv.style.backgroundColor = "#6d9af2"; // Изменяем цвет на желаемый
+            } else {
+                hashtagDiv.style.backgroundColor = "#48484e"; // Изменяем цвет на другой желаемый
+            }
+        };
+    } else {
+        console.error('Element with id "hashtagDiv" not found');
     }
+
 
 
 
